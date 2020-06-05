@@ -1,0 +1,120 @@
+#app {
+    width       : 50%;
+    margin      : 0 auto;
+    border      : 1px solid #ddd;
+    --themeColor: #ead7d8;
+    .hidden{
+        display:none
+    }
+    .show{
+        display:block
+    }
+    .app-header {
+        h1 {
+            color      : var(--themeColor);
+            text-align : center;
+            font-weight: 100;
+        }
+    }
+
+    .app-content {
+        .app-content-top {
+            display: flex;
+            height:30px;
+            position: relative;
+            .left {
+                flex:1;
+                text-align: center;
+                transform: rotate(90deg);
+                color:#ddd;
+            }
+            .allcheck{
+                color:black;
+            }
+            .right {
+                flex:9;
+                position: relative;
+                input {
+                    width:100%;
+                    height:100%;
+                }
+                ul{
+                    position:absolute;
+                    list-style: none;
+                    li{
+                        height: 30px;
+                        line-height: 30px;
+                        width:100px;
+                        color:black;
+                        background-color:#ddd;
+                        border-bottom: 1px solid black;
+                    }
+                }
+            }
+        }
+
+        .app-content-list {
+            .app-content-liste-item {
+                height: 50px;
+                line-height: 50px;
+                padding:5px;
+                display:flex;
+                .left {
+                    flex:1;
+                    input {}
+                }
+
+                .middle {
+                    flex:8;
+                    text-align: left;
+                }
+                .completed{
+                    color:#ddd;
+                    text-decoration: line-through;
+                }
+
+                .right {
+                    display:none;
+                    flex:1;
+                }
+            }
+            .app-content-liste-item:hover{
+                .right{
+                    display:block;
+                }
+            }
+        }
+    }
+
+    .app-bottom {
+        display:flex;
+        height:50px;
+        align-items: center;
+        border-top: 1px solid #ddd;
+        justify-content: space-between;
+        padding:5px;
+        .app-bottom-left {
+        }
+
+        .app-bottom-middle {
+            display:flex;
+            .active{
+                border:1px solid var(--themeColor);
+            }
+            .app-bottom-middle-all {
+                margin-right:10px;
+            }
+
+            .app-bottom-middle-active {
+                margin-right:10px;
+            }
+
+            .app-bottom-middle-finish {
+                margin-right:10px;
+            }
+        }
+
+        .app-bottom-right {
+        }
+    }
+}
