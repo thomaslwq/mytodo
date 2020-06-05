@@ -49,12 +49,14 @@
                     return !v.completed
                 })
                 return remaining;
+            },
+            visibility: function(){
+                return this.$root.visibility;// all 全部 active 激活项(completed false) finish(completed true)
             }
         },
         data: function(){
             return {
                 inputting: false,
-                visibility: "all",// all 全部 active 激活项(completed false) finish(completed true)
                 allCheckLabel: false,
                 inputVal: "",//输入框的值
                 edit_index: -1,// -1 代表没有在编辑的项
